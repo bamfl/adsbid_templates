@@ -1933,110 +1933,83 @@ SMART 1=========================================================================
 
 /**
 КАРУСЕЛЬ================================================================================================================================================================================
-Добавить класс .slider элементу .box__row
+
 **/
-
-//Slick-slider
-.slick-slider {
-	position: relative;
-	height: 100%;
-	min-width: 0;
-
-	.slick-track,
-	.slick-list {
-		-webkit-transform: translate3d(0, 0, 0);
-		-moz-transform: translate3d(0, 0, 0);
-		-ms-transform: translate3d(0, 0, 0);
-		-o-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-	}
-	.slick-list {
-		position: relative;
-		overflow: hidden;
-		width: 100%;
-		height: 100%;
-
-	}
-	.slick-track {
-		position: relative;
-		width: 100%;
-		display: flex;
-		height: 100%;
-
-	}
-	.slick-slide {
-		position: relative;
-		height: 100%;
-	}
-
-
-	.slick-arrow {
-		position: absolute;
-		z-index: 100;
-		top: 50%;
-		font-size: 0;
-		width: 44px;
-		height: 68px;
-		background-color: #fff !important;
-		border-radius: 4px;
-		transform: translate(0, -50%);		
-		transition: all 0.5s;
-		-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
-		-moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
-		box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
-
-		&.slick-prev {
-			left: -50px;
-
-			&::before {
-				content:'';
-				width: 0;
-				height: 0;
-				border-style: solid;
-				border-width: 9px 12px 9px 0;
-				border-color: transparent #000 transparent transparent;
-				margin: 0px 3px 0px 0px;
-			}
-		}
-
-		&.slick-next {
-			right: -50px;
-
-			&::before {
-				content:'';
-				width: 0;
-				height: 0;
-				border-style: solid;
-				border-width: 9px 0 9px 12px;
-				border-color: transparent transparent transparent #000;
-				margin: 0px 0px 0px 3px;
-			}
-		}
-
-		&.slick-disabled {
-			display: none !important;
-		}
-	}
-}
-//Slick-slider
 
 .container {
 	padding: 30px 10px;
+	position: relative;
 	overflow: hidden;
 }
+
+.arrow {
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+	font-size: 0;
+	width: 44px;
+	height: 68px;
+	background-color: #fff !important;
+	border-radius: 4px;
+	-webkit-transform: translate(0, -50%);
+		-ms-transform: translate(0, -50%);
+			transform: translate(0, -50%);
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+  
+.arrow.prev {
+	left: -50px;
+}
+  
+.arrow.prev::before {
+	content: '';
+	position: relative;
+	top: 50%;
+
+	width: 12px;
+	height: 18px;
+	border-style: solid;
+	border-width: 9px 12px 9px 0;
+	border-color: transparent #000 transparent transparent;
+	margin: 0px 3px 0px 0px;
+}
+  
+.arrow.next {
+	right: -50px;
+}
+  
+.arrow.next::before {
+	content: '';
+	position: relative;
+	width: 12px;
+	height: 18px;
+	top: 50%;
+	border-style: solid;
+	border-width: 9px 0 9px 12px;
+	border-color: transparent transparent transparent #000;
+	margin: 0px 0px 0px 3px;
+}
+
 .box {
 	&__row {
+		display: flex;
+		overflow-x: scroll;
 		margin: 0 -8px;
 		padding: 0px 10px 0px 0px;
 
 		@media (min-width:1024px){
 			&:hover{
-				.slick-arrow {
-					&.slick-prev {
+				.arrow {
+					&.prev {
 						left: 40px;
 					}
 			
-					&.slick-next {
+					&.next {
 						right: 40px;
 					}
 				}
@@ -2045,24 +2018,24 @@ SMART 1=========================================================================
 
 
 		@media (max-width: 1023px){
-			.slick-arrow {
-				&.slick-prev {
+			.arrow {
+				&.prev {
 					left: 35px;
 				}
 		
-				&.slick-next {
+				&.next {
 					right: 35px;
 				}
 			}
 		}
 
 		@media (max-width: 599px){
-			.slick-arrow {
-				&.slick-prev {
+			.arrow {
+				&.prev {
 					left: 40px;
 				}
 		
-				&.slick-next {
+				&.next {
 					right: 40px;
 				}
 			}
@@ -2070,14 +2043,14 @@ SMART 1=========================================================================
 
 		@media (max-width: 425px){
 			
-			.slick-arrow {
+			.arrow {
 				display: none !important;
 
-				&.slick-prev {
+				&.prev {
 					left: 15px;
 				}
 		
-				&.slick-next {
+				&.next {
 					right: 15px;
 				}
 			}
@@ -2086,6 +2059,7 @@ SMART 1=========================================================================
 
 	&__column {
 		padding: 0 8px;
+		flex: 0 1 50%;
 	}
 
 	&__item {
@@ -2097,24 +2071,7 @@ SMART 1=========================================================================
 	display: block;
 	border-radius: 4px;
 	overflow: hidden;
-
-	&_1 {
-	}
-
-	&_2 {
-	}
-
-	&_3 {
-	}
-
-	&_4 {
-	}
-
-	&_5 {
-	}
-
-	&_6 {
-	}
+	min-width: 192px;
 
 	&__image {
 		position: relative;

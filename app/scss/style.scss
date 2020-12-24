@@ -13,6 +13,10 @@
 	max-width: 512px;
 }
 
+.arrow {
+	display: none;
+}
+
 .box {
 
 	&__row {
@@ -250,6 +254,10 @@
 	}
 }
 
+.arrow {
+	display: none;
+}
+
 .box {
 
 	&__row {
@@ -466,6 +474,10 @@
 	max-width: 1512.05px;
 }
 
+.arrow {
+	display: none;
+}
+
 .box {
 
 	&__row {
@@ -629,6 +641,10 @@
 	padding: 30px 10px;
 }
 
+.arrow {
+	display: none;
+}
+
 .box {
 
 	&__row {
@@ -780,6 +796,10 @@
 	}
 }
 
+.arrow {
+	display: none;
+}
+
 .box {
 
 	&__row {
@@ -921,6 +941,10 @@
 	}
 }
 
+.arrow {
+	display: none;
+}
+
 .box {
 
 	&__row {
@@ -1054,6 +1078,10 @@
 .container {
 	padding: 30px 10px;
 	max-width: 1536.02px;
+}
+
+.arrow {
+	display: none;
 }
 
 .box {
@@ -1194,6 +1222,10 @@
 .container {
 	padding: 30px 10px;
 	max-width: 1536.05px;
+}
+
+.arrow {
+	display: none;
 }
 
 .box {
@@ -1388,6 +1420,10 @@
 	max-width: 1542.02px;
 }
 
+.arrow {
+	display: none;
+}
+
 .box {
 	&__row {
 		display: flex;
@@ -1551,6 +1587,9 @@
 	max-width: 100%;
 	padding: 0 10px;
 }
+.arrow {
+	display: none;
+}
 .item-box {
 	min-width: 100%;
 
@@ -1683,6 +1722,10 @@ SMART 1=========================================================================
 	max-width: 936.02px;
 }
 
+.arrow {
+	display: none;
+}
+
 .box {
 
 	&__row {
@@ -1798,9 +1841,9 @@ SMART 1=========================================================================
 		}
 	}
 
- &__btn {
+	&__btn {
 		display: none;
- }
+	}
 
 	&__else {
 		display: none;
@@ -1814,25 +1857,25 @@ SMART 1=========================================================================
 		display: none;
 	}
 
-&__title {
-	display: none;
-}
-
-&__subtitle {
-	display: none;
-}
-
- &__bottom {
- 	display: none;
+	&__title {
+		display: none;
 	}
 
-&__date {
-	display: none;
-}
+	&__subtitle {
+		display: none;
+	}
 
-&__menu {
-	display: none;
-}
+	&__bottom {
+		display: none;
+		}
+
+	&__date {
+		display: none;
+	}
+
+	&__menu {
+		display: none;
+	}
 
 	&__icon {
 		display: none;
@@ -1933,7 +1976,6 @@ SMART 1=========================================================================
 
 /**
 КАРУСЕЛЬ================================================================================================================================================================================
-
 **/
 
 .container {

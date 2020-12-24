@@ -4,8 +4,243 @@
 @import "_global";
 
 /** BOX=====================================================================================================================================================================================
+/**
+БОЛЬШОЙ=====================================================================================================================================================================================
+**/
+/**
+.container {
+	padding: 30px 10px;
+	max-width: 512px;
+}
 
-ГРАФИЧЕСКИЙ 1===========================================================================================================================================================================**/
+.box {
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -4px;
+	}
+
+	&__column {
+		flex: 1 1 100%;
+		padding: 4px;
+		min-width: 300px;
+
+		&:not(:nth-child(1)){
+			display: none;
+		}
+	}
+}
+
+.item-box {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	overflow: hidden;
+
+	&__image {
+		position: relative;
+		padding: 0px 0px 66.668% 0px;
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}	
+	}
+
+	&__text {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+	}
+
+	&__descr {
+		text-align: left;
+		text-decoration: none;
+		font-weight: bold;
+		line-height: 1.4;
+		font-size: 30px;
+		margin: 65px 10px 10px;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-box;
+		-moz-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		line-clamp: 3;
+		box-orient: vertical;
+
+		@media (max-width:425px){
+			font-size: 25px;
+		}
+
+		@media (max-width:425px){
+			font-size: 20px;
+		}
+	}
+
+	&__shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		transition: all 0.2s ease-out 0s;	
+
+		&:hover{
+			opacity: 1;					
+		}
+	}
+
+ &__btn {
+		display: none;
+ }
+
+	&__else {
+		display: none;
+	}
+
+	&__socials {
+		display: none;
+	}
+
+	&__top {
+		display: none;
+	}
+
+&__title {
+	display: none;
+}
+
+&__subtitle {
+	display: none;
+}
+
+ &__bottom {
+ 	display: none;
+	}
+
+&__date {
+	display: none;
+}
+
+&__menu {
+	display: none;
+}
+
+	&__icon {
+		display: none;
+	}
+
+	&__likes {
+		display: none;
+	}
+
+	&__comments {
+		display: none;
+	}
+
+	&__refs {
+		display: none;
+	}
+
+	&_1 {
+		.item-box {
+			&__descr {
+				color: #fff;
+			}
+
+			&__text {
+				background: linear-gradient(transparent, rgba(77, 68, 77, 0.25) 15%, rgb(77, 68, 77) 50%);
+				color: #fff;
+			}
+
+			&__shadow {
+				background: rgba(229, 196, 174, 0.4);
+			}
+		}
+	}
+
+	&_2 {
+		.item-box {
+			&__text {
+				background: linear-gradient(transparent, rgba(199, 169, 120, 0.25) 15%, rgb(199, 169, 120) 50%);
+			}
+
+			&__shadow {
+				background: rgba(199, 169, 120, 0.4);
+			}
+		}
+	}
+
+	&_3 {
+		.item-box {
+			&__text {
+				background: linear-gradient(transparent, rgba(77, 68, 77, 0.25) 15%, rgb(77, 68, 77) 50%);
+				color: #fff;
+			}
+
+			&__shadow {
+				background: rgba(77, 68, 77, 0.4);
+			}
+		}
+	}
+
+	&_4 {
+		.item-box {
+			&__text {
+				background: linear-gradient(transparent, rgba(1, 1, 4, 0.25) 15%, rgb(1, 1, 4) 50%);
+				color: #fff;
+			}
+
+			&__shadow {
+				background: rgba(1, 1, 4, 0.4);
+			}
+		}
+	}
+
+	&_5 {
+		.item-box {
+			&__text {
+				background: linear-gradient(transparent, rgba(97, 126, 83, 0.25) 15%, rgb(97, 126, 83) 50%);
+				color: #fff;
+			}
+
+			&__shadow {
+				background: rgba(97, 126, 83, 0.4);
+			}
+		}
+	}
+
+	&_6 {
+		.item-box {
+			&__text {
+				background: linear-gradient(transparent, rgba(96, 100, 78, 0.25) 15%, rgb(96, 100, 78) 50%);
+				color: #fff;
+			}
+
+			&__shadow {
+				background: rgba(96, 100, 78, 0.4);
+			}
+		}
+	}
+}
+**/
+/**
+БОЛЬШОЙ=================================================================================================================================================================================
+**/
+
+/**
+ГРАФИЧЕСКИЙ 1===========================================================================================================================================================================
+**/
 /**
 .container {
 	padding: 30px 65px;
@@ -218,8 +453,322 @@
 	}
 }
 **/
+/**
+ГРАФИЧЕСКИЙ 1===========================================================================================================================================================================
+**/
 
-/**ГРАФИЧЕСКИЙ 1===========================================================================================================================================================================**/
+/**
+ГРАФИЧЕСКИЙ 4===========================================================================================================================================================================
+**/
+/**
+.container {
+	padding: 30px 10px;
+	max-width: 1512.05px;
+}
+
+.box {
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -4px;
+	}
+
+	&__column {
+		flex: 0 1 33.333%;
+		padding: 4px;
+
+		@media (max-width:768px){
+			flex: 1 1 100%;
+		}
+	}
+}
+
+.item-box {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	border-radius: 4px;
+	overflow: hidden;
+
+	&__image {
+		position: relative;
+		padding: 0px 0px 66.668% 0px;
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}	
+	}
+
+	&__text {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(255,255,255,.9);
+		margin: 6px 6px 6px 6px;
+		border-radius: 10px;
+		padding: 10px;
+	}
+
+	&__descr {
+		text-align: left;
+		text-decoration: none;
+		font-weight: bold;
+		line-height: 1.4;
+		font-size: 19px;
+		min-width: 100%;
+		padding: 0px 60px 0px 0px;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-box;
+		-moz-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		line-clamp: 4;
+		box-orient: vertical;
+
+		position: relative;
+		&::after {
+			content:'';
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			top: 50%;
+			right: 0px;
+			background: url('../images/arrow_blue.svg') 0 0 / contain no-repeat;
+			transform: translate(0, -50%);
+		}
+		
+		@media (max-width:1280px){
+			font-size: 16px;
+		}
+		
+		@media (max-width:1024px){
+			font-size: 14px;
+			line-height: 1.2;
+		}
+
+		@media (max-width:768px){
+			font-size: 16px;
+		}
+	}
+
+	&__shadow {
+		display: none;
+	}
+
+	&__btn {
+			display: none;
+	}
+
+	&__else {
+		display: none;
+	}
+
+	&__socials {
+		display: none;
+	}
+
+	&__top {
+		display: none;
+	}
+
+	&__title {
+		display: none;
+	}
+
+	&__subtitle {
+		display: none;
+	}
+
+	&__bottom {
+		display: none;
+		}
+
+	&__date {
+		display: none;
+	}
+
+	&__menu {
+		display: none;
+	}
+
+	&__icon {
+		display: none;
+	}
+
+	&__likes {
+		display: none;
+	}
+
+	&__comments {
+		display: none;
+	}
+
+	&__refs {
+		display: none;
+	}
+}
+**/
+/**
+ГРАФИЧЕСКИЙ 4===========================================================================================================================================================================
+**/
+
+/**
+ГОРИЗОНТАЛЬНЫЙ 1========================================================================================================================================================================
+**/
+/**
+.container {
+	padding: 30px 10px;
+}
+
+.box {
+
+	&__row {
+		
+	}
+
+	&__column {
+		
+	}
+}
+
+.item-box {
+	display: flex;
+	padding: 30px;
+	margin: 0px 0px 8px 0px;
+
+	@media (max-width:$md3+px){
+		flex-direction: column;
+		padding: 0 0 20px 0;
+	}
+
+	&__image {
+		flex: 0 0 492px;
+		position: relative;
+		padding: 0px 0px 32.8% 0px;
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+
+		@media (max-width:1024px){
+			flex: 0 1 50%;
+		}
+
+		@media (max-width:$md3+px){
+			margin: 0px 0px 20px 0px;
+			padding: 0px 0px 50% 0px;
+		}
+	}
+
+	&__text {
+		padding: 0 20px;
+		font-size: 25px;
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+
+		@media (max-width:1024px){
+			flex: 0 1 50%;
+		}
+
+		@media (max-width:$md3+px){
+			padding: 0;
+		}
+	}
+	
+	&__descr {
+		flex: 1 1 100%;
+		margin: 0px 0px 20px 0px;
+		color: #333;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}	
+
+	&__btn {
+		margin-right: auto;
+		padding: 12px 30px;
+		background-color: #333;
+		color: #fff;
+		font-size: 20px;
+		font-weight: 500;
+		background-color: #4e92df;
+		border-radius: 3px;
+		box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+		font-weight: 600;
+	}
+
+	&__shadow {
+		display: none;
+	}
+
+	&__else {
+		display: none;
+	}
+
+	&__socials {
+		display: none;
+	}
+
+	&__top {
+		display: none;
+	}
+
+&__title {
+	display: none;
+}
+
+&__subtitle {
+	display: none;
+}
+
+ &__bottom {
+ 	display: none;
+	}
+
+&__date {
+	display: none;
+}
+
+&__menu {
+	display: none;
+}
+
+	&__icon {
+		display: none;
+	}
+
+	&__likes {
+		display: none;
+	}
+
+	&__comments {
+		display: none;
+	}
+
+	&__refs {
+		display: none;
+	}
+}
+**/
+/**
+ГОРИЗОНТАЛЬНЫЙ 1========================================================================================================================================================================
+**/
 
 /**
 ГОРИЗОНТАЛЬНЫЙ 2========================================================================================================================================================================
@@ -500,16 +1049,14 @@
 
 /**
 ОБЪЯВЛЕНИЯ С ДАТОЙ ПУБЛИКАЦИИ===========================================================================================================================================================
+**/
+/**
 .container {
-	padding: 30px 65px;
-
-	@media (max-width:1070px){
-		padding: 15px;
-	}
+	padding: 30px 10px;
+	max-width: 1536.02px;
 }
 
 .box {
-
 	&__row {
 		display: flex;
 		flex-wrap: wrap;
@@ -522,15 +1069,10 @@
 		display: flex;
 		margin: 0px 0px 25px 0px;
 
-		@media (max-width:1070px){
-			flex: 0 1 50%;
-		}
-
-		@media (max-width:$md3+px){
-			flex: 1 1 auto;
+		@media (max-width:600px){
+			flex: 1 1 100%;
 		}
 	}
-
 }
 
 .item-box {
@@ -539,11 +1081,10 @@
 	border-radius: 4px;
 	overflow: hidden;
 	box-shadow: 0 4px 15px rgba(0,0,0,0.07), 0 5px 15px rgba(0,0,0,0.07);
-	min-width: 300px;	
 
 	&__image {
 		position: relative;
-		height: 150px;
+		padding: 0px 0px 66.668% 0px;
 		
 		img {
 			position: absolute;
@@ -552,10 +1093,6 @@
 			top: 0;
 			left: 0;
 			object-fit: cover;
-		}
-
-		@media (max-width:1070px){
-			height: 200px;
 		}
 	}
 	
@@ -574,6 +1111,16 @@
 		font-weight: 400;
 		flex: 1 1 auto;
 		margin: 0px 0px 15px 0px;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-box;
+		-moz-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 5;
+		-webkit-box-orient: vertical;
+		line-clamp: 5;
+		box-orient: vertical;
 	}
 
 	&__shadow {
@@ -635,6 +1182,8 @@
 		display: none;
 	}
 }
+**/
+/**
 ОБЪЯВЛЕНИЯ С ДАТОЙ ПУБЛИКАЦИИ===========================================================================================================================================================
 **/
 
@@ -643,11 +1192,8 @@
 **/
 /**
 .container {
-	padding: 30px 65px;
-
-	@media (max-width:1070px){
-		padding: 15px;
-	}
+	padding: 30px 10px;
+	max-width: 1536.05px;
 }
 
 .box {
@@ -665,12 +1211,8 @@
 		display: flex;
 		margin: 0px 0px 25px 0px;
 
-		@media (max-width:1070px){
-			flex: 0 1 50%;
-		}
-
-		@media (max-width:$md3+px){
-			flex: 1 1 auto;
+		@media (max-width:750px){
+			flex: 1 1 100%;
 		}
 	}
 
@@ -679,15 +1221,14 @@
 .item-box {
 	display: flex;
 	flex-direction: column;
-	min-width: 300px;
 
-	@media (max-width:1070px){
+	@media (max-width:750px){
 		min-width: 100%;
 	}
 
 	&__image {
 		position: relative;
-		padding: 0px 0px 59.345% 0px;
+		padding: 0px 0px 66.87% 0px;
 		
 		img {
 			position: absolute;
@@ -792,6 +1333,7 @@
 
 	&__social {
 		padding: 0px 23px;
+		line-height: 1.4;
 		position: relative;
 
 		&::before {
@@ -802,6 +1344,15 @@
 			top: 0px;
 			left: 0;
 			object-fit: contain;
+		}
+
+		@media (max-width:1024px){
+			font-size: 12px;
+
+
+			&::before {
+				top: -2px;
+			}
 		}
 	}
 
@@ -829,6 +1380,147 @@
 **/
 
 /**
+ГОРИЗОНТАЛЬНЫЙ 5===========================================================================================================================================================
+**/
+/**
+.container {
+	padding: 30px 10px;
+	max-width: 1542.02px;
+}
+
+.box {
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+	}
+		
+	&__column {
+		flex: 0 1 33.333%;
+		padding: 0px 10px;
+		display: flex;
+		margin: 0px 0px 25px 0px;
+
+		@media (max-width:600px){
+			flex: 1 1 100%;
+		}
+	}
+}
+
+.item-box {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	border: 1px solid #dddcda;
+
+	&__image {
+		position: relative;
+		padding: 0px 0px 66.668% 0px;
+		
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+	
+	&__text {
+		padding: 15px;
+		flex: 1 1 auto;
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		color: #202125;
+	}
+
+	&__descr {
+		font-size: 18px;
+		line-height: 1.2;
+		font-weight: 400;
+		flex: 1 1 auto;
+		margin: 0px 0px 15px 0px;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-box;
+		-moz-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 5;
+		-webkit-box-orient: vertical;
+		line-clamp: 5;
+		box-orient: vertical;
+	}
+
+	&__shadow {
+		display: none;
+	}
+
+	&__btn {
+		padding: 5px 10px;
+		border: 1px solid #DDDCDA;
+		border-radius: 8px;
+		max-width: 111px;
+	}
+
+	&__else {
+		display: none;
+	}
+
+	&__top {
+		display: none;
+	}
+
+	&__title {
+		display: none;
+	}
+
+	&__subtitle {
+		display: none;
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__date {
+		display: none;
+	}
+
+	&__menu {
+		display: none;
+	}
+
+	&__icon {
+		display: none;
+	}
+
+	&__socials {
+		display: none;
+	}
+
+	&__likes {
+		display: none;
+	}
+
+	&__comments {
+		display: none;
+	}
+
+	&__refs {
+		display: none;
+	}
+}
+**/
+/**
+ГОРИЗОНТАЛЬНЫЙ 5===========================================================================================================================================================
+**/
+
+/**
 ГОРИЗОНТАЛЬНЫЙ 6========================================================================================================================================================================
 **/
 /**
@@ -847,11 +1539,7 @@
 		padding: 0 5px;
 		margin: 0px 0px 10px 0px;
 
-		@media (max-width:768px){
-			flex: 0 1 50%;
-		}
-
-		@media (max-width:425px){
+		@media (max-width:480px){
 			flex: 1 1 100%;
 		}
 	}
@@ -886,7 +1574,7 @@
 
 	&__image {
 		position: relative;
-		padding: 0px 0px 100% 0px;
+		padding: 0px 0px 60% 0px;
 
 		img {
 			position: absolute;
@@ -923,6 +1611,20 @@
 		line-height: 1.2;
 		font-weight: 600;
 		text-align: left;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-box;
+		-moz-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 5;
+		-webkit-box-orient: vertical;
+		line-clamp: 5;
+		box-orient: vertical;
+
+		@media (max-width:768px){
+			font-size: 16px;
+		}
 
 		&:hover{
 			color: #529299;
@@ -966,7 +1668,6 @@
 	&__shadow {
 	}
 }
-
 **/
 /**
 ГОРИЗОНТАЛЬНЫЙ 6========================================================================================================================================================================
@@ -998,9 +1699,10 @@ SMART 1=========================================================================
 			flex: 0 1 66.667%;
 
 			.item-box__image {
-				padding: 0px 0px 50% 0px;
-				@media (max-width:850px){
+				padding: 0px 0px 49.34% 0px;
+				@media (max-width:600px){				
 					padding: 0px 0px 100% 0px;
+					
 				}
 			}
 		}
@@ -1009,15 +1711,12 @@ SMART 1=========================================================================
 			flex: 1 1 100%;
 
 			.item-box__image {
-				padding: 0px 0px 33.333% 0px;
-				@media (max-width:850px){
+				padding: 0px 0px 32.751% 0px;
+				@media (max-width:600px){					
 					padding: 0px 0px 100% 0px;
+					
 				}
 			}
-		}
-
-		@media (max-width:850px){
-			flex: 0 1 50% !important;
 		}
 
 		@media (max-width:600px){
@@ -1062,7 +1761,27 @@ SMART 1=========================================================================
 		font-weight: bold;
 		line-height: 1.4;
 		font-size: 19px;
-		padding: 65px 10px 10px;
+		margin: 65px 10px 10px;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-box;
+		-moz-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		line-clamp: 4;
+		box-orient: vertical;
+
+		@media (max-width:768px){
+			font-size: 16px;
+			line-height: 1.2;
+		}
+
+		@media (max-width:600px){
+			font-size: 19px;
+			line-height: 1.4;
+		}
 	}
 
 	&__shadow {
@@ -1133,7 +1852,7 @@ SMART 1=========================================================================
 
 	&_1 {
 		.item-box {
-			&__descr {
+			&__text {
 				background: linear-gradient(transparent, rgba(229, 196, 174, 0.25) 15%, rgb(229, 196, 174) 50%);
 			}
 
@@ -1145,7 +1864,7 @@ SMART 1=========================================================================
 
 	&_2 {
 		.item-box {
-			&__descr {
+			&__text {
 				background: linear-gradient(transparent, rgba(199, 169, 120, 0.25) 15%, rgb(199, 169, 120) 50%);
 			}
 
@@ -1157,7 +1876,7 @@ SMART 1=========================================================================
 
 	&_3 {
 		.item-box {
-			&__descr {
+			&__text {
 				background: linear-gradient(transparent, rgba(77, 68, 77, 0.25) 15%, rgb(77, 68, 77) 50%);
 				color: #fff;
 			}
@@ -1170,7 +1889,7 @@ SMART 1=========================================================================
 
 	&_4 {
 		.item-box {
-			&__descr {
+			&__text {
 				background: linear-gradient(transparent, rgba(1, 1, 4, 0.25) 15%, rgb(1, 1, 4) 50%);
 				color: #fff;
 			}
@@ -1183,7 +1902,7 @@ SMART 1=========================================================================
 
 	&_5 {
 		.item-box {
-			&__descr {
+			&__text {
 				background: linear-gradient(transparent, rgba(97, 126, 83, 0.25) 15%, rgb(97, 126, 83) 50%);
 				color: #fff;
 			}
@@ -1196,7 +1915,7 @@ SMART 1=========================================================================
 
 	&_6 {
 		.item-box {
-			&__descr {
+			&__text {
 				background: linear-gradient(transparent, rgba(96, 100, 78, 0.25) 15%, rgb(96, 100, 78) 50%);
 				color: #fff;
 			}
@@ -1216,7 +1935,7 @@ SMART 1=========================================================================
 КАРУСЕЛЬ================================================================================================================================================================================
 Добавить класс .slider элементу .box__row
 **/
-/**
+
 //Slick-slider
 .slick-slider {
 	position: relative;
@@ -1303,11 +2022,12 @@ SMART 1=========================================================================
 
 .container {
 	padding: 30px 10px;
+	overflow: hidden;
 }
 .box {
 	&__row {
 		margin: 0 -8px;
-		overflow: hidden;
+		padding: 0px 10px 0px 0px;
 
 		@media (min-width:1024px){
 			&:hover{
@@ -1349,7 +2069,10 @@ SMART 1=========================================================================
 		}
 
 		@media (max-width: 425px){
+			
 			.slick-arrow {
+				display: none !important;
+
 				&.slick-prev {
 					left: 15px;
 				}
@@ -1487,7 +2210,7 @@ SMART 1=========================================================================
 	&__shadow {
 	}
 }
-**/
+
 /**
 КАРУСЕЛЬ================================================================================================================================================================================
 **/
